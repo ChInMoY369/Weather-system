@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +18,42 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f0f2f5;
+  color: #333;
+}
+
+.dark body {
+  background-color: #1a202c;
+  color: #f7fafc;
+}
+
+/* Light mode text classes */
+.text-primary {
+  @apply text-gray-900;
+}
+.text-secondary {
+  @apply text-gray-800;
+}
+.text-tertiary {
+  @apply text-gray-700;
+}
+
+/* Dark mode overrides */
+.dark .text-primary {
+  @apply text-white;
+}
+.dark .text-secondary {
+  @apply text-gray-200;
+}
+.dark .text-tertiary {
+  @apply text-gray-300;
+}
+
+/* Force light mode colors */
+.light-text {
+  color: #333 !important;
+}
+
+/* Ensure text contrast in light mode */
+p, h1, h2, h3, h4, h5, h6 {
+  @apply text-gray-900 dark:text-gray-100;
 }

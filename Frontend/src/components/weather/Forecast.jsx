@@ -27,14 +27,14 @@ const Forecast = ({ forecastData }) => {
       <div className="p-4 grid grid-cols-5 gap-2">
         {daysData.map((day, index) => (
           <div key={index} className="flex flex-col items-center">
-            <p className="text-sm font-medium text-gray-600 dark:text-gray-300">{day.dayName}</p>
+            <p className="text-sm font-medium text-gray-800 dark:text-gray-300">{day.dayName}</p>
             <img 
               src={`https://openweathermap.org/img/wn/${day.weather.icon}.png`} 
               alt={day.weather.description} 
               className="w-10 h-10"
             />
-            <p className="text-lg font-bold dark:text-white">{Math.round(day.temp)}°C</p>
-            <p className="text-xs text-gray-500 text-center capitalize dark:text-gray-400">{day.weather.main}</p>
+            <p className="text-lg font-bold text-gray-900 dark:text-white">{Math.round(day.temp)}°C</p>
+            <p className="text-xs text-gray-700 text-center capitalize dark:text-gray-400">{day.weather.main}</p>
           </div>
         ))}
       </div>

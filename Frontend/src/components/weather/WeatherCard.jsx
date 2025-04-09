@@ -44,14 +44,14 @@ const WeatherCard = ({ data, onRefresh, isRefreshing }) => {
               className="w-20 h-20 mr-4"
             />
             <div>
-              <h3 className="text-4xl font-bold text-gray-800 dark:text-white">{Math.round(main.temp)}°C</h3>
-              <p className="text-gray-600 capitalize dark:text-gray-300">{weather[0].description}</p>
+              <h3 className="text-4xl font-bold text-gray-900 dark:text-white">{Math.round(main.temp)}°C</h3>
+              <p className="text-gray-800 capitalize dark:text-gray-300">{weather[0].description}</p>
             </div>
           </div>
           <div className="text-right">
-            <p className="text-sm text-gray-600 dark:text-gray-300">Feels like: {Math.round(main.feels_like)}°C</p>
-            <p className="text-sm text-gray-600 dark:text-gray-300">Max: {Math.round(main.temp_max)}°C</p>
-            <p className="text-sm text-gray-600 dark:text-gray-300">Min: {Math.round(main.temp_min)}°C</p>
+            <p className="text-sm text-gray-800 dark:text-gray-300">Feels like: {Math.round(main.feels_like)}°C</p>
+            <p className="text-sm text-gray-800 dark:text-gray-300">Max: {Math.round(main.temp_max)}°C</p>
+            <p className="text-sm text-gray-800 dark:text-gray-300">Min: {Math.round(main.temp_min)}°C</p>
           </div>
         </div>
         
@@ -61,8 +61,8 @@ const WeatherCard = ({ data, onRefresh, isRefreshing }) => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
             </svg>
             <div>
-              <p className="text-xs text-gray-500 dark:text-gray-400">Humidity</p>
-              <p className="font-semibold text-gray-700 dark:text-gray-300">{main.humidity}%</p>
+              <p className="text-xs text-gray-700 dark:text-gray-400">Humidity</p>
+              <p className="font-semibold text-gray-900 dark:text-gray-300">{main.humidity}%</p>
             </div>
           </div>
           
@@ -71,8 +71,8 @@ const WeatherCard = ({ data, onRefresh, isRefreshing }) => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             <div>
-              <p className="text-xs text-gray-500 dark:text-gray-400">Pressure</p>
-              <p className="font-semibold text-gray-700 dark:text-gray-300">{main.pressure} hPa</p>
+              <p className="text-xs text-gray-700 dark:text-gray-400">Pressure</p>
+              <p className="font-semibold text-gray-900 dark:text-gray-300">{main.pressure} hPa</p>
             </div>
           </div>
           
@@ -82,8 +82,8 @@ const WeatherCard = ({ data, onRefresh, isRefreshing }) => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
             <div>
-              <p className="text-xs text-gray-500 dark:text-gray-400">Visibility</p>
-              <p className="font-semibold text-gray-700 dark:text-gray-300">{(data.visibility / 1000).toFixed(1)} km</p>
+              <p className="text-xs text-gray-700 dark:text-gray-400">Visibility</p>
+              <p className="font-semibold text-gray-900 dark:text-gray-300">{(data.visibility / 1000).toFixed(1)} km</p>
             </div>
           </div>
           
@@ -92,8 +92,8 @@ const WeatherCard = ({ data, onRefresh, isRefreshing }) => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
             <div>
-              <p className="text-xs text-gray-500 dark:text-gray-400">Wind</p>
-              <p className="font-semibold text-gray-700 dark:text-gray-300">{wind.speed} km/h</p>
+              <p className="text-xs text-gray-700 dark:text-gray-400">Wind</p>
+              <p className="font-semibold text-gray-900 dark:text-gray-300">{wind.speed} km/h</p>
             </div>
           </div>
         </div>
